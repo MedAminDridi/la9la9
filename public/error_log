@@ -1,0 +1,60 @@
+[22-Mar-2022 01:14:53 UTC] PHP Fatal error:  Uncaught Error: Interface 'JsonSerializable' not found in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php:11
+Stack trace:
+#0 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include()
+#1 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#3 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(12): spl_autoload_call('Illuminate\\Supp...')
+#4 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include('/home/ana89/des...')
+#5 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#6 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#7 /home/ana8 in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php on line 11
+[22-Mar-2022 01:14:55 UTC] PHP Fatal error:  Uncaught Error: Interface 'JsonSerializable' not found in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php:11
+Stack trace:
+#0 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include()
+#1 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#3 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(12): spl_autoload_call('Illuminate\\Supp...')
+#4 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include('/home/ana89/des...')
+#5 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#6 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#7 /home/ana8 in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php on line 11
+[22-Mar-2022 01:14:56 UTC] PHP Fatal error:  Uncaught Error: Interface 'JsonSerializable' not found in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php:11
+Stack trace:
+#0 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include()
+#1 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#3 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(12): spl_autoload_call('Illuminate\\Supp...')
+#4 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include('/home/ana89/des...')
+#5 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#6 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#7 /home/ana8 in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php on line 11
+[22-Mar-2022 01:14:58 UTC] PHP Fatal error:  Uncaught Error: Interface 'JsonSerializable' not found in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php:11
+Stack trace:
+#0 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include()
+#1 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#3 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(12): spl_autoload_call('Illuminate\\Supp...')
+#4 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include('/home/ana89/des...')
+#5 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#6 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#7 /home/ana8 in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php on line 11
+[22-Mar-2022 01:15:00 UTC] PHP Fatal error:  Uncaught Error: Interface 'JsonSerializable' not found in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php:11
+Stack trace:
+#0 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include()
+#1 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#3 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(12): spl_autoload_call('Illuminate\\Supp...')
+#4 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include('/home/ana89/des...')
+#5 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#6 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#7 /home/ana8 in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php on line 11
+[22-Mar-2022 01:15:01 UTC] PHP Fatal error:  Uncaught Error: Interface 'JsonSerializable' not found in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php:11
+Stack trace:
+#0 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include()
+#1 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#3 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Collection.php(12): spl_autoload_call('Illuminate\\Supp...')
+#4 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(480): include('/home/ana89/des...')
+#5 /home/ana89/despatecho.analeteologie-iasi.ro/vendor/composer/ClassLoader.php(346): Composer\Autoload\includeFile('/home/ana89/des...')
+#6 [internal function]: Composer\Autoload\ClassLoader->loadClass('Illuminate\\Supp...')
+#7 /home/ana8 in /home/ana89/despatecho.analeteologie-iasi.ro/vendor/laravel/framework/src/Illuminate/Collections/Enumerable.php on line 11
