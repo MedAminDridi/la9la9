@@ -172,8 +172,8 @@ function redirect(){
                 <a href="#" class=""><span class="mbl_home"><i class="fas fa-home"></i></span>Home</a>
                 <a href="#" class=""><span class="mbl_ship"><i class="fas fa-shipping-fast"></i></span>Ship</a>
                 <a href="#" class=""><span class="mbl_track"><i class="fas fa-location-arrow"></i></span>Track</a>
-                <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>Help and support</a>
-                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>Find a location/a>
+                <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>{{Session()->get("lang-header-help")}}</a>
+                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>Find a location</a>
 
                 <a href="#" class=" reg_m"><span class="mbl_reg"><i class="fas fa-lock"></i></span>Connexion</a>
 
@@ -181,7 +181,7 @@ function redirect(){
             <div class="navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Help and support</a>
+                        <a class="nav-link" href="#">{{Session()->get("lang-header-help")}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link loc" href="#">Find a location</a>
@@ -301,7 +301,7 @@ function redirect(){
                                     <div class="square">
                                         <h4 class="headline">Contact and Support </h4>
                                         <ul>
-                                            <li><a href="#">Help and support</a></li>
+                                            <li><a href="#">{{Session()->get("lang-header-help")}}</a></li>
                                             <li><a href="#">FAQs</a></li>
                                             <li><a href="#">Contact Us</a></li>
                                             <li><a href="#">Find a location</a></li>
