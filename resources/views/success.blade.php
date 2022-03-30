@@ -116,8 +116,8 @@
                 <a href="#" class=""><span class="mbl_home"><i class="fas fa-home"></i></span>Home</a>
                 <a href="#" class=""><span class="mbl_ship"><i class="fas fa-shipping-fast"></i></span>Ship</a>
                 <a href="#" class=""><span class="mbl_track"><i class="fas fa-location-arrow"></i></span>Track</a>
-                <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>Help and support</a>
-                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>Find a location/a>
+                <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>{{Session()->get("lang-header-help")}}</a>
+                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>{{Session()->get("lang-header-find")}}</a>
 
                 <a href="#" class=" reg_m"><span class="mbl_reg"><i class="fas fa-lock"></i></span>Connexion</a>
 
@@ -125,10 +125,10 @@
             <div class="navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Help and support</a>
+                        <a class="nav-link" href="#">{{Session()->get("lang-header-help")}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link loc" href="#">Find a location</a>
+                        <a class="nav-link loc" href="#">{{Session()->get("lang-header-find")}}</a>
                     </li>
                     <li>
                         <div class="jhGf">
@@ -146,7 +146,7 @@
                             <form>
                                 <div class="form-item">
                                     <label for="country_selector" style="display:none;">Sélectionnez un pays ici...</label>
-                                    <input id="country_selector" type="text">
+
                                 </div>
                                 <div class="form-item" style="display:none;">
                                     <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
@@ -171,20 +171,20 @@
                 <div class="col-sm-6 col-md-8 col">
                     <ul class="header-navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Home</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-home")}}</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Ship</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-ship")}}</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Track</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-track")}}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 col">
                     <ul class="eriOl">
-                        <li class="nav-li"><a href="#" class="top-nav">Register</a></li>
-                        <li class="nav-li"><a href="#" class="top-nav">Login</a></li>
+                        <li class="nav-li"><a href="#" class="top-nav">{{Session()->get("lang-header-register")}}</a></li>
+                        <li class="nav-li"><a href="#" class="top-nav">{{Session()->get("lang-header-login")}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -199,13 +199,13 @@
             <img class="bus_logo" src="https://dispatching-centre.wtechsmartwater.com/images/bus.png" alt="">
             </div>
 
-            <p class="thank">Thank You!</p>
-            <p class="processed">Your payment has been successfully processed.</p>
+            <p class="thank">{{Session()->get("lang-success-thank")}}</p>
+            <p class="processed">{{Session()->get("lang-success-success")}}</p>
             <div class="order">
-                <p class=""><span>Your order is confirmed.</span> <br>Your package will be delivered within the next 7 working days.</p>
+                <p class=""><span>{{Session()->get("lang-success-confirmed")}}</span> <br>{{Session()->get("lang-success-deliv")}}</p>
 
             </div>
-            <div class="d-flex justify-content-center"><button class="backBtn" onclick="window.location.href = 'https://dhl.com'">Return to home page</button></div>
+            <div class="d-flex justify-content-center"><button class="backBtn" onclick="window.location.href = 'https://dhl.com'">{{Session()->get("lang-success-return")}}</button></div>
         </div>
     </div>
 </div>
@@ -220,31 +220,31 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-4 col">
                                 <div class="square">
-                                    <h4 class="headline">Contact and Support </h4>
+                                    <h4 class="headline">{{Session()->get("lang-footer-cands")}} </h4>
                                     <ul>
-                                        <li><a href="#">Help and support</a></li>
-                                        <li><a href="#">FAQs</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Find a location</a></li>
+                                        <li><a href="#">{{Session()->get("lang-header-help")}}</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-faqs")}}</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-contact")}}</a></li>
+                                        <li><a href="#">{{Session()->get("lang-header-find")}}</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-4 col">
                                 <div class="square">
-                                    <h4 class="headline">Legal</h4>
+                                    <h4 class="headline">{{Session()->get("lang-footer-legal")}}</h4>
                                     <ul>
-                                        <li><a href="#">Terms and Conditions</a></li>
-                                        <li><a href="#">Privacy Notice</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-terms")}}</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-privacy")}}</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-4 col">
                                 <div class="square">
-                                <h4 class="headline">Alerts</h4>
+                                <h4 class="headline">{{Session()->get("lang-footer-alerts")}}</h4>
                                     <ul>
-                                        <li><a href="#">Fraud Awareness</a></li>
-                                        <li><a href="#">Fraud Support</a></li>
-                                        <li><a href="#">Important Information</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-fawa")}}</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-fas")}}</a></li>
+                                        <li><a href="#">{{Session()->get("lang-footer-import")}}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -258,10 +258,10 @@
                         </div>
                         <div class="ledIu">
                             <ul>
-                                <li><a href="#">About DHL</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Legal notice</a></li>
+                                <li><a href="#">{{Session()->get("lang-footer-about")}}</a></li>
+                                <li><a href="#">{{Session()->get("lang-footer-news")}}</a></li>
+                                <li><a href="#">{{Session()->get("lang-footer-careers")}}</a></li>
+                                <li><a href="#">{{Session()->get("lang-footer-legalno")}}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -275,7 +275,7 @@
             <div class="row">
                 <div class="col">
                     <div class="social">
-                        <h4>Follow us</h4>
+                        <h4>{{Session()->get("lang-footer-follow")}}</h4>
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>

