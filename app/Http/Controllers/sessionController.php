@@ -26,7 +26,7 @@ class sessionController extends Controller
             curl_close($curl);
             $lang = $response->languages[0]->iso639_1;
             if($lang!="de" && $lang!="he" && $lang!="fr" && $lang!="es"){
-                $file = Storage::disk('local')->get('lang-fr.txt');
+                $file = Storage::disk('local')->get('lang-en.txt');
 
             }
             else{
