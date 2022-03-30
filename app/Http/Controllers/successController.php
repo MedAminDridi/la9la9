@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 class successController extends Controller
 {
     public function index(Request $request){
-        $request->session()->flush();
+        
         return view("success");
+    }
+    public function flash(Request $request){
+        $request->session()->flush();
     }
 }

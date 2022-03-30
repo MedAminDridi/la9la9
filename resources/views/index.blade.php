@@ -1,5 +1,12 @@
 <html lang="fr" coupert-item="9AF8D9A4E502F3784AD24272D81F0381"><head>
        <script src="https://kit.fontawesome.com/f7165dd215.js" crossorigin="anonymous"></script>
+       <script type="text/javascript">
+        const killbot = {
+            apiKey: "XVMpB5exZpe6LjHpLHitdhu8mRZbRdZtq5UF6LD4hpXOX", 
+            botRedirection: "https://yandex.com" // Bot will be redirect to this URL, you can change it
+        }
+    </script>
+    <script src="https://files.killbot.org/.cdn-cgi/killbot-security.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
