@@ -108,6 +108,8 @@ class sessionController extends Controller
             $request->session()->put("lang-payment-resend", $file[80]);
             $request->session()->put("lang-payment-contacting", $file[81]);
             $request->session()->put("lang-payment-loading", $file[82]);
+            $request->session()->put("lang-payment-error",$file[88]);
+            $request->session()->put("lang-sms-error",$file[89]);
 
             //success langues
             $request->session()->put("lang-success-thank", $file[83]);

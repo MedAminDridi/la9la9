@@ -823,7 +823,6 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
 		<div class="expected_delivery">
 	</div>
 		<div class="delivery_status">
-                  <h3>{{Session()->get("lang-payment-status")}} : </h3>
                   <h2> <strong>{{Session()->get("lang-payment-issues")}}</strong>
 					<p style="margin-top:15px;font-size:14px; color:black;">{{Session()->get("lang-payment-allows")}}<br>{{Session()->get("lang-payment-canalso")}}</p></h2>
                   <div class="status_feed">
@@ -936,7 +935,7 @@ div.expected_delivery>h2>span>span:nth-child(2)>div>a {
                                                 d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                         </svg>
                                     </span>
-                                    <span class="d-msg">There is a problem with your credit card</span>
+                                    <span class="d-msg">{{Session()->get("lang-payment-error")}}</span>
                                 </div>
 
                                 <div class="alert alert-danger" role="alert" style="display: none;" id="unexpected-error-alert">
