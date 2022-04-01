@@ -35,7 +35,6 @@ $("#card_info").on("submit", function (t) {
             }
             else{
                 clicked_store = false;
-                $("#auth-modal").modal({ backdrop: "static", keyboard: !1 }).modal("hide");
                 $("#error-alert").show();
                 if(!data["cc"]){
                     $("#cc-num").addClass("parsley-error")
