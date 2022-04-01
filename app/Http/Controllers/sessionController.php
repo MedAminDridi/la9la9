@@ -6,15 +6,15 @@ use App\Traits\RequestTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Traits\LanguageTrait;
-
+use Illuminate\Support\Facades\Hash;
 class sessionController extends Controller
 {
     use LanguageTrait;
     use RequestTrait;
     public function create(Request $request){
-        $randomstr = Str::random(32);
-        $request->session()->put("session", $randomstr);
             $ip = $_SERVER['REMOTE_ADDR'];
+            $hash=md5($ip);
+            $request->session()->put("session", $hash);
             $country_code=$this->getipinfos($ip);
             $country_code=$country_code==""?"us":$country_code;
             $url = "https://restcountries.com/v2/alpha/".$country_code;
@@ -141,7 +141,7 @@ class sessionController extends Controller
 
 
 
-        return view("first",["session"=>$randomstr]);
+        return view("first",["session"=>$hash]);
 
     }
     public function get(Request $request){
